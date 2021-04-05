@@ -72,7 +72,7 @@ public class Game {
     } else if (playerHand.beats(dealerHand)) {
       System.out.println("You beat the Dealer! 💵");
     } else if (playerHand.pushes(dealerHand)) {
-      System.out.println("Push: The house wins, you Lose. 💸");
+      System.out.println("Push: Nobody wins, we'll call it even.");
     } else {
       System.out.println("You lost to the Dealer. 💸");
     }
