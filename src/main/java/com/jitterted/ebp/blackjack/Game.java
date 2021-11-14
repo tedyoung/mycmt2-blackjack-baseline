@@ -1,6 +1,7 @@
 package com.jitterted.ebp.blackjack;
 
 import org.fusesource.jansi.Ansi;
+import org.fusesource.jansi.AnsiConsole;
 
 import java.util.Scanner;
 
@@ -15,7 +16,10 @@ public class Game {
 
     public static void main(String[] args) {
         displayWelcomeScreen();
+        waitForEnterFromUser();
+
         playGame();
+
         resetScreen();
     }
 
@@ -29,14 +33,23 @@ public class Game {
         game.play();
     }
 
+    private static void waitForEnterFromUser() {
+        System.out.println(ansi()
+                                   .cursor(3, 1)
+                                   .fgBrightBlack().a("Hit [ENTER] to start..."));
+
+        System.console().readLine();
+    }
+
     private static void displayWelcomeScreen() {
+        AnsiConsole.systemInstall();
         System.out.println(ansi()
                                    .bgBright(Ansi.Color.WHITE)
                                    .eraseScreen()
                                    .cursor(1, 1)
                                    .fgGreen().a("Welcome to")
-                                   .fgRed().a(" Jitterted's")
-                                   .fgBlack().a(" BlackJack"));
+                                   .fgRed().a(" JitterTed's")
+                                   .fgBlack().a(" BlackJack game"));
     }
 
     public Game() {
