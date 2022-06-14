@@ -35,7 +35,7 @@ public class Hand {
         return handValue;
     }
 
-    String displayFirstCard() {
+    String displayFaceUpCard() {
         return cards.get(0).display();
     }
 

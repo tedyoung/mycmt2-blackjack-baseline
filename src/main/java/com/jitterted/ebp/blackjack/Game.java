@@ -129,9 +129,9 @@ public class Game {
     private void displayGameState() {
         System.out.print(ansi().eraseScreen().cursor(1, 1));
         System.out.println("Dealer has: ");
-        System.out.println(dealerHand.displayFirstCard()); // first card is Face Up
+        System.out.println(dealerHand.displayFaceUpCard());
 
-        // second card is the hole card, which is hidden
+        // second card is the hole card, which is hidden, or "face down"
         displayBackOfCard();
 
         System.out.println();
