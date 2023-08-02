@@ -16,10 +16,8 @@
 
     <maven.compiler.release>11</maven.compiler.release>
 
-    <maven.jar.plugin.version>3.1.1</maven.jar.plugin.version>
-
-    <assertj.version>3.23.1</assertj.version>
-    <junit.version>5.9.0</junit.version>
+    <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+    <junit.version>5.9.3</junit.version>
   </properties>
 
   <dependencies>
@@ -44,7 +42,7 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>${assertj.version}</version>
+      <version>3.24.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
