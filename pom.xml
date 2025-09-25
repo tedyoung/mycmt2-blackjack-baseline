@@ -51,7 +51,7 @@
 
   <build>
     <plugins>
-      <!-- Makes the JAR executable, by configuring the plugin to start with the main class -->
+      <!-- Makes the JAR executable by configuring the plugin to start with the main class -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
